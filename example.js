@@ -22,7 +22,7 @@ const rl = readline.createInterface({
 });
 
 rl.question("mnemonic? ", function(mnemonic) {
-    console.log('${mnemonic} is entered');
+    console.log('$mnemonic is entered');
     rl.close();    
 });
 
