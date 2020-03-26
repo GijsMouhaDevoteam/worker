@@ -14,5 +14,3 @@ let startParams = {
 let drop = dropjs.start(startParams)
 
 let wallet = await drop.generateWallet()
-
-console.log(wallet)
