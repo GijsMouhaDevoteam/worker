@@ -21,7 +21,7 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-rl.question("mnemonic? ",, function(mnemonic) {
+rl.question("mnemonic? ", function(mnemonic) {
     console.log('${mnemonic} is entered');
     rl.close();    
 });
