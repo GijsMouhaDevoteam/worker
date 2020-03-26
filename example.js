@@ -1,9 +1,9 @@
 const dropjs = require("@dropilcoin/dropjs")
 
 let startParams = {
-  chainId: 'dropilchain-testnet', // String
+  chainId: 'Dropil-Chain-Poseidon', // String
   lcdUrl: 'http://192.168.1.47:1317', // String
-  hdPath: "m/44'/118'/0'/0/0", // String
+  hdPath: "m/44'/495'/0'/0/0", // String
   bech32Prefix: 'drop', // String
   denom: 'udrop', // String
   powerReduction: 1000000, // int
