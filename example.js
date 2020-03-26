@@ -15,17 +15,4 @@ let drop = dropjs.start(startParams)
 
 //let wallet = await drop.generateWallet()
 
-const readline = require("readline");
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
 
-rl.question("mnemonic? ", function(mnemonic) {
-    console.log('$mnemonic is entered');
-    rl.close();    
-});
-
-rl.on("close", function() {
-    process.exit(0);
-});
