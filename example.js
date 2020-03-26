@@ -11,8 +11,33 @@ let startParams = {
   baseGas: '200000', // String
 }
 
+//optie 1: Await werkt alleen in async functie, dus moet ge een async fucntie declaren en uitvoeren.
 let drop = dropjs.start(startParams)
 
-//let wallet = await drop.generateWallet()
+const start = async function() {
+let wallet = await drop.generateWallet()
+console.log(wallet)
+}
+start()
 
+//optie 2: Werk rechtstreeks met de Promise door then/catch syntax te gebruiken
+let drop = dropjs.start(startParams)
+drop.generateWallet()
+  .then((wallet) => {
+    console.log(wallet)
+})
 
+const readline = require("readline");
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question("mnemonic? ", function(mnemonic) {
+    console.log('${mnemonic} is entered');
+    rl.close();    
+});
+
+rl.on("close", function() {
+    process.exit(0);
+});
